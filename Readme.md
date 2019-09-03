@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Леонид Косолапов](https://up.htmlacademy.ru/htmlcss/26/user/792795).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Иовлев](https://htmlacademy.ru/profile/skywalker).
 
 ---
 
