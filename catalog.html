@@ -57,12 +57,12 @@
   <h1>Перфораторы</h1>
   <section>
     <h2>Фильтр</h2>
-    <div>
-      <h3>Цена</h3>
-      <p>0 - 3000</p>
-    </div>
     <form action="#">
       <fieldset>
+        <div>
+          <label for="price1">Цена</label><br>
+          <input type="range" id="price1" name="price1" min="0" max="50000" step="10" value="0" data-popup-enabled="true" data-show-value="true">
+        </div>
         <div>
           <h3>Производители:</h3>
           <input type="checkbox" id="maker-bosh" name="maker-bosh" checked>
@@ -90,11 +90,11 @@
   <section>
     <h2 hidden>Список товаров</h2>
     <h3>Сортировка:</h3>
-    <a href="#">По цене</a>
-    <a href="#">По типу</a>
-    <a href="#">По функционалу</a>
-    <a href="#">По убыванию</a>
-    <a href="#">По возрастанию</a>
+    <button>По цене</button>
+    <button>По типу</button>
+    <button>По функционалу</button>
+    <button>По убыванию</button>
+    <button>По возрастанию</button>
     <ul>
       <li>
         <h4>
@@ -206,9 +206,9 @@
     </ul>
     <ul>
       <li>1</li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">Следующая</a></li>
+      <li><button>2</button></li>
+      <li><button>3</button></li>
+      <li><button>Следующая</button></li>
     </ul>
   </section>
   <section>
