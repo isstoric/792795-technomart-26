@@ -49,29 +49,29 @@
 <main>
   <h1 hidden>Техномарт</h1>
   <section>
-    <h2 hidden>Cписок ссылок на разделы каталога</h2>
-    <ul>
-      <li>
-        <b>Материалы</b>
+    <h2 hidden>Ссылки на разделы сайта</h2>
+    <ul class="promo-block">
+      <li class="materials">
+        <p>Материалы</p>
         <a href="#">На любой вкус</a>
       </li>
-      <li>
-        <b>Инструменты</b>
+      <li class="instruments">
+        <p>Инструменты</p>
         <a href="#">На все случаи</a>
       </li>
-      <li>
-        <b>Техника</b>
+      <li class="technics">
+        <p>Техника</p>
         <a href="#">Для стройки</a>
       </li>
     </ul>
-    <div>
+    <div class="slider">
       <ul>
         <li>
           <figure>
             <img src="img/slide-image1.jpg" width="620" height="266" alt="Дрели">
             <figcaption>
-              <p>Дрели</p>
-              <p>Соседям на радость</p>
+              <p class="slider-name">Дрели</p>
+              <p class="slider-slogan">Соседям на радость</p>
               <a href="catalog.html">Открыть каталог</a>
             </figcaption>
           </figure>
@@ -80,8 +80,8 @@
           <figure>
             <img src="img/slide-image2.jpg" width="620" height="266" alt="Дрели">
             <figcaption>
-              <p>Перфораторы</p>
-              <p>Настоящие мужские игрушки</p>
+              <p class="slider-name">Перфораторы</p>
+              <p class="slider-slogan">Настоящие мужские игрушки</p>
               <a href="catalog.html">Открыть каталог</a>
             </figcaption>
           </figure>
@@ -92,75 +92,79 @@
       <button type="button" aria-label="Назад"></button>
       <button type="button" aria-label="Вперед"></button>
     </div>
-    <ul>
-      <li>
-        <b>Скидки 50%</b>
+    <ul class="promo-block">
+      <li class="sales">
+        <p>Скидки 50%</p>
         <a href="#">На 350 товаров</a>
       </li>
-      <li>
-        <b>Доставка</b>
+      <li class="delivery">
+        <p>Доставка</p>
         <a href="#">Бесплатно</a>
       </li>
     </ul>
   </section>
   <section>
-    <h2>Популярные товары</h2>
-    <a href="#">Все популярные товары</a>
-    <ul>
+    <div class="section-header">
+      <h2>Популярные товары:</h2>
+      <a href="#">Все популярные товары</a>
+    </div>
+    <ul class="list-items">
       <li>
-        <h4>
+        <h4 class="item-name">
           <span>Перфоратор BOSCH</span>
           <span>BFG 9000</span>
         </h4>
         <img src="img/item4.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 9000">
-        <a href="#">Купить</a>
-        <a href="#">В закладки</a>
+        <button class="buy-button" type="button">Купить</button>
+        <button class="to-bookmarks" type="button">В закладки</button>
         <p>
           <del>32500 Р.</del>
         </p>
-        <p>25500 Р.</p>
+        <p class="item-price">25500 Р.</p>
       </li>
       <li>
-        <h3>
+        <h4 class="item-name">
           <span>Перфоратор BOSCH</span>
           <span>BFG 3000</span>
-        </h3>
+        </h4>
         <img src="img/item1.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 3000">
-        <a href="#">Купить</a>
-        <a href="#">В закладки</a>
+        <button class="buy-button" type="button">Купить</button>
+        <button class="to-bookmarks" type="button">В закладки</button>
         <p>
           <del>22500 Р.</del>
         </p>
-        <p>15500 Р.</p>
+        <p class="item-price">15500 Р.</p>
       </li>
       <li>
-        <h3>
+        <h4 class="item-name">
           <span>Перфоратор BOSCH</span>
           <span>BFG 6000</span>
-        </h3>
+        </h4>
         <img src="img/item2.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 6000">
-        <a href="#">Купить</a>
-        <a href="#">В закладки</a>
+        <button class="buy-button" type="button">Купить</button>
+        <button class="to-bookmarks" type="button">В закладки</button>
         <p>
           <del>30500 Р.</del>
         </p>
-        <p>25500 Р.</p>
+        <p class="item-price">25500 Р.</p>
       </li>
       <li>
-        <h3>
+        <h4 class="item-name">
           <span>Перфоратор BOSCH</span>
           <span>BFG 2000</span>
-        </h3>
+        </h4>
         <img src="img/item3.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 2000">
-        <a href="#">Купить</a>
-        <a href="#">В закладки</a>
-        <p>12500 Р.</p>
+        <button class="buy-button" type="button">Купить</button>
+        <button class="to-bookmarks" type="button">В закладки</button>
+        <p class="item-price">12500 Р.</p>
       </li>
     </ul>
   </section>
   <section>
-    <h2>Популярные производиетели</h2>
-    <a href="#">Все производители</a>
+    <div class="section-header">
+      <h2>Популярные производиетели:</h2>
+      <a href="#">Все производители</a>
+    </div>
     <ul>
       <li>
         <a href="#">
@@ -204,27 +208,27 @@
       </li>
     </ul>
   </section>
-  <section>
+  <section class="services-section">
     <h2>Сервисы</h2>
-    <p>
+    <p class="services-slogan">
       Хороший интернет-магазин отличается от плохого не только ценами!
       Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
     </p>
-    <div>
+    <div class="services-description">
       <ul>
         <li>
-          <button>Доставка</button>
+          <button class="description-active">Доставка</button>
         </li>
         <li>
-          <button>Гарантия</button>
+          <button class="description-inactive">Гарантия</button>
         </li>
         <li>
-          <button>Кредит</button>
+          <button class="description-inactive">Кредит</button>
         </li>
       </ul>
       <dl>
-        <dt>Доставка</dt>
-        <dd>
+        <dt class="description-header">Доставка</dt>
+        <dd class="description-body">
           Мы с удовольствием доставим ваш товар прямо
           к вашему подъезду совершенно бесплатно!
           Ведь мы неплохо заработаем,
@@ -232,8 +236,8 @@
         </dd>
       </dl>
       <dl>
-        <dt>Гарантия</dt>
-        <dd>
+        <dt class="description-header">Гарантия</dt>
+        <dd class="description-body">
           Если купленный у нас товар поломается или заискрит,
           а также в случае пожара, спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы
           обменяем сгоревший товар на новый.
@@ -241,8 +245,8 @@
         </dd>
       </dl>
       <dl>
-        <dt>Кредит</dt>
-        <dd>
+        <dt class="description-header">Кредит</dt>
+        <dd class="description-body">
           Залезть в долговую яму стало проще!
           Кредитные консультанты придут вам на помощь.
         </dd>
