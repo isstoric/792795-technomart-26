@@ -12,12 +12,12 @@
 <header>
   <div class="header-menu">
     <div class="menu-container container">
-      <a href="index.htmlgit a" class="header-logo">
+      <a href="index.html" class="header-logo">
         <img src="img/logo-technomart.svg" alt="Логотип Техномарт" width="109" height="19">
       </a>
       <form action="#" method="post" class="search">
         <label for="search" aria-label="Поиск"></label>
-        <input type="text" id="search" name="search" placeholder="Поиск:">
+        <input type="text" id="search" name="search" placeholder="Поиск:" class="search-input">
         <button type="submit" aria-label="Найти" class="search-button" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
             <path fill="#697080"
@@ -26,9 +26,9 @@
         </button>
       </form>
       <ul class="order-links">
-        <li><a class="bookmarks-empty order-link" href="#">Закладки: 0</a></li>
-        <li><a class="cart-full order-link" href="#">Корзина: 10</a></li>
-        <li><a class="order order-link" href="#">Оформить заказ</a></li>
+        <li class="order-links-item"><a class="bookmarks-empty order-link" href="#">Закладки: 0</a></li>
+        <li class="order-links-item"><a class="cart-full order-link" href="#">Корзина: 10</a></li>
+        <li class="order-links-item"><a class="order order-link" href="#">Оформить заказ</a></li>
       </ul>
     </div>
   </div>
@@ -78,29 +78,29 @@
           <button type="button" aria-label="max-price"></button>
         </div>
         <label for="min-price" aria-label="Цена от"></label>
-        <input type="text" id="min-price" name="min-price" value="0">
+        <input type="text" id="min-price" name="min-price" value="0" class="input-price">
         <span>-</span>
         <label for="min-price" aria-label="Цена до"></label>
-        <input type="text" id="max-price" name="min-price" value="30000">
+        <input type="text" id="max-price" name="min-price" value="30000" class="input-price">
       </fieldset>
       <fieldset class="makers-filter">
         <legend>Производители:</legend>
-        <input type="checkbox" id="maker-bosh" name="maker-bosh" checked>
+        <input type="checkbox" id="maker-bosh" name="maker-bosh" checked class="input-maker">
         <label for="maker-bosh">BOSCH</label><br>
-        <input type="checkbox" id="maker-interscol" name="maker-interscol">
+        <input type="checkbox" id="maker-interscol" name="maker-interscol" class="input-maker">
         <label for="maker-interscol">ИНТЕРСКОЛ</label><br>
-        <input type="checkbox" id="maker-makita" name="maker-makita" checked>
+        <input type="checkbox" id="maker-makita" name="maker-makita" checked class="input-maker">
         <label for="maker-makita">MAKITA</label><br>
-        <input type="checkbox" id="maker-dewalt" name="maker-dewalt">
+        <input type="checkbox" id="maker-dewalt" name="maker-dewalt" class="input-maker">
         <label for="maker-dewalt">DEWALT</label><br>
-        <input type="checkbox" id="maker-hitachi" name="maker-hitachi">
+        <input type="checkbox" id="maker-hitachi" name="maker-hitachi" class="input-maker">
         <label for="maker-hitachi">HITACHI</label><br>
       </fieldset>
       <fieldset class="power-filter">
         <legend>Питание:</legend>
-        <input type="radio" id="accumulator" name="power" value="accumulator" checked>
+        <input type="radio" id="accumulator" name="power" value="accumulator" checked class="input-power">
         <label for="accumulator">Аккумуляторные</label><br>
-        <input type="radio" id="network" name="power" value="network">
+        <input type="radio" id="network" name="power" value="network" class="input-power">
         <label for="network">Сетевые</label>
       </fieldset>
       <button class="button-submit" type="submit">Показать</button>
