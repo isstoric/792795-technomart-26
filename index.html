@@ -96,8 +96,8 @@
           <!--            </figure>-->
           <!--          </li>-->
         </ul>
-        <button class="slider-buttons previous-slide" type="button" name="back" aria-label="Слайд 1" ></button>
-        <button class="slider-buttons next-slide" type="button" name="forward" aria-label="Слайд 2" ></button>
+        <button class="slider-buttons previous-slide" type="button" name="back" aria-label="Слайд 1"></button>
+        <button class="slider-buttons next-slide" type="button" name="forward" aria-label="Слайд 2"></button>
         <button class="slider-buttons back" type="button" aria-label="Назад"></button>
         <button class="slider-buttons forward" type="button" aria-label="Вперед"></button>
       </div>
@@ -127,7 +127,9 @@
         <div class="item-image">
           <img src="img/item4.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 9000">
         </div>
-        <div class="item-name">Перфоратор BOSCH BFG 9000</div>
+        <div class="item-name">
+          <a href="#">Перфоратор BOSCH BFG 9000</a>
+        </div>
         <div class="item-discount">32500 Р.</div>
         <div class="item-price">25500 Р.</div>
       </li>
@@ -139,7 +141,9 @@
         <div class="item-image">
           <img src="img/item1.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 3000">
         </div>
-        <div class="item-name">Перфоратор BOSCH BFG 3000</div>
+        <div class="item-name">
+          <a href="#">Перфоратор BOSCH BFG 3000</a>
+        </div>
         <div class="item-discount">22500 Р.</div>
         <div class="item-price">15500 Р.</div>
       </li>
@@ -151,7 +155,9 @@
         <div class="item-image">
           <img src="img/item2.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 6000">
         </div>
-        <div class="item-name">Перфоратор BOSCH BFG 6000</div>
+        <div class="item-name">
+          <a href="#">Перфоратор BOSCH BFG 6000</a>
+        </div>
         <div class="item-discount">30500 Р.</div>
         <div class="item-price">25500 Р.</div>
       </li>
@@ -164,7 +170,9 @@
         <div class="item-image">
           <img src="img/item3.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 2000">
         </div>
-        <div class="item-name">Перфоратор BOSCH BFG 2000</div>
+        <div class="item-name">
+          <a href="#">Перфоратор BOSCH BFG 2000</a>
+        </div>
         <div class="item-discount"></div>
         <div class="item-price">12500 Р.</div>
       </li>
@@ -385,19 +393,29 @@
       </label>
     </div>
     <label class="bottom-input">Текст письма:
-      <textarea class="input-message" name="message-text" id="message" rows="5" placeholder="В свободной форме"></textarea>
+      <textarea class="input-message" name="message-text" id="message" rows="5"
+                placeholder="В свободной форме"></textarea>
     </label>
   </div>
   <div class="button-area">
     <button class="button-submit" type="submit">Отправить</button>
   </div>
-
 </section>
 <section class="add-cart">
+  <div class="form-line"></div>
+  <div class="form-close">
+    <button class="close-button" type="button" aria-label="Закрыть">
+      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
+           xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
+          fill="#ee3643"/>
+      </svg>
+    </button>
+  </div>
   <h2>Товар добавлен в корзину</h2>
   <div class="buttons-back">
-    <button type="button" aria-label="Закрыть"></button>
-    <a href="#">Оформить заказ</a>
+    <a class="issue-order" href="#">Оформить заказ</a>
     <button class="button-continue" type="button">Продолжить покупки</button>
   </div>
 </section>
