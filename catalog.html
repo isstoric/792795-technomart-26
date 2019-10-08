@@ -9,7 +9,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-<header class="header-catalog">
+<header class="header">
   <div class="header-menu">
     <div class="menu-container container">
       <a class="header-logo" href="index.html">
@@ -399,10 +399,20 @@
   </div>
 </footer>
 <section class="add-cart">
+  <div class="form-line"></div>
+  <div class="form-close">
+    <button class="close-button" type="button" aria-label="Закрыть">
+      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
+           xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
+          fill="#ee3643"/>
+      </svg>
+    </button>
+  </div>
   <h2>Товар добавлен в корзину</h2>
   <div class="buttons-back">
-    <button type="button" aria-label="Закрыть"></button>
-    <a href="#">Оформить заказ</a>
+    <a class="issue-order" href="#">Оформить заказ</a>
     <button class="button-continue" type="button">Продолжить покупки</button>
   </div>
 </section>
