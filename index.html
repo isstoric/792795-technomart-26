@@ -24,14 +24,18 @@
         </button>
       </form>
       <ul class="order-links">
-        <li class="order-links-item"><a class="links-optional" href="#">Закладки: 0</a></li>
-        <li class="order-links-item"><a class="links-optional" href="#">Корзина: 0</a></li>
+        <li class="order-links-item">
+          <a class="links-optional link-bookmarks" href="#">Закладки: 0</a>
+        </li>
+        <li class="order-links-item">
+          <a class="links-optional link-cart" href="#">Корзина: 0</a>
+        </li>
         <li><a class="order" href="#">Оформить заказ</a></li>
       </ul>
     </div>
   </div>
   <div class="header-info container">
-    <p class="about-shop">Интернет-магазин строительных материалов  и инструментов для ремонта</p>
+    <p class="about-shop">Интернет-магазин  строительных материалов  и инструментов для ремонта</p>
     <address class="header-address">
       <a href="tel:+78125550555">+7 (812) 555-05-55</a>
       <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
@@ -73,33 +77,39 @@
       </li>
     </ul>
     <div class="second-row">
+      <input class="visually-hidden" type="radio" id="item-1" name="toggle" checked>
+      <input class="visually-hidden" type="radio" id="item-2" name="toggle">
       <div class="slider">
         <ul>
-          <li class="slide">
+          <li class="slide" id="slide1">
             <figure>
               <img src="img/slide-image1.jpg" width="620" height="266" alt="Дрели">
               <figcaption>
                 <p class="slider-name">Дрели</p>
                 <p class="slider-slogan">Соседям на радость!</p>
               </figcaption>
-              <a href="catalog.html">Открыть каталог</a>
             </figure>
+            <a href="catalog.html">Открыть каталог</a>
           </li>
-          <!--          <li>-->
-          <!--            <figure>-->
-          <!--              <img src="img/slide-image2.jpg" width="620" height="266" alt="Дрели">-->
-          <!--              <figcaption>-->
-          <!--                <p class="slider-name">Перфораторы</p>-->
-          <!--                <p class="slider-slogan">Настоящие мужские игрушки</p>-->
-          <!--                <a href="catalog.html">Открыть каталог</a>-->
-          <!--              </figcaption>-->
-          <!--            </figure>-->
-          <!--          </li>-->
+          <li class="slide" id="slide2">
+            <figure>
+              <img src="img/slide-image2.jpg" width="620" height="266" alt="Дрели">
+              <figcaption>
+                <p class="slider-name">Перфораторы</p>
+                <p class="slider-slogan">Настоящие мужские игрушки</p>
+              </figcaption>
+            </figure>
+            <a href="catalog.html">Открыть каталог</a>
+          </li>
         </ul>
-        <button class="slider-buttons previous-slide" type="button" name="back" aria-label="Слайд 1"></button>
-        <button class="slider-buttons next-slide" type="button" name="forward" aria-label="Слайд 2"></button>
-        <button class="slider-buttons back" type="button" aria-label="Назад"></button>
-        <button class="slider-buttons forward" type="button" aria-label="Вперед"></button>
+        <div class="slider-controls">
+          <label class="control-left" for="item-1">Первый слайд</label>
+          <label class="control-right" for="item-2">Второй слайд</label>
+        </div>
+        <div class="slider-buttons">
+          <label class="button-back" for="item-1">Назад</label>
+          <label class="button-forward" for="item-2">Вперед</label>
+        </div>
       </div>
       <ul class="promo-block service">
         <li class="sales">
@@ -122,7 +132,7 @@
       <li class="catalog-item">
         <p class="item-actions">
           <a href="#" class="buy-button">Купить</a>
-          <a href="#" class="to-bookmarks">В закладки</a>
+          <a href="#" class="add-bookmarks">В закладки</a>
         </p>
         <div class="item-image">
           <img src="img/item4.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 9000">
@@ -136,7 +146,7 @@
       <li class="catalog-item">
         <p class="item-actions">
           <a href="#" class="buy-button">Купить</a>
-          <a href="#" class="to-bookmarks">В закладки</a>
+          <a href="#" class="add-bookmarks">В закладки</a>
         </p>
         <div class="item-image">
           <img src="img/item1.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 3000">
@@ -150,7 +160,7 @@
       <li class="catalog-item">
         <p class="item-actions">
           <a href="#" class="buy-button">Купить</a>
-          <a href="#" class="to-bookmarks">В закладки</a>
+          <a href="#" class="add-bookmarks">В закладки</a>
         </p>
         <div class="item-image">
           <img src="img/item2.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 6000">
@@ -165,7 +175,7 @@
         <div class="flag flag-new">новинка</div>
         <p class="item-actions">
           <a href="#" class="buy-button">Купить</a>
-          <a href="#" class="to-bookmarks">В закладки</a>
+          <a href="#" class="add-bookmarks">В закладки</a>
         </p>
         <div class="item-image">
           <img src="img/item3.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 2000">
@@ -234,45 +244,52 @@
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
       </p>
       <div class="services-description">
+        <input class="visually-hidden" type="radio" id="delivery" name="description-toggle" checked>
+        <input class="visually-hidden" type="radio" id="guarantee" name="description-toggle">
+        <input class="visually-hidden" type="radio" id="credit" name="description-toggle">
         <ul class="services-list">
           <li>
-            <button class="description-active">Доставка</button>
+            <label class="description-button" for="delivery" id="label-delivery">Доставка</label>
           </li>
           <li>
-            <button class="description-inactive">Гарантия</button>
+            <label class="description-button" for="guarantee" id="label-guarantee">Гарантия</label>
           </li>
           <li>
-            <button class="description-inactive">Кредит</button>
+            <label class="description-button" for="credit" id="label-credit">Кредит</label>
           </li>
         </ul>
-        <dl>
-          <dt class="description-header">Доставка</dt>
-          <dd class="description-delivery">
-            Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем,
-            поднимая его на ваш этаж!
-          </dd>
-        </dl>
-        <!--        <dl>-->
-        <!--          <dt class="description-header">Гарантия</dt>-->
-        <!--          <dd class="description-guarantee">-->
-        <!--            Если купленный у нас товар поломается или заискрит,-->
-        <!--            а также в случае пожара, спровоцированного его возгоранием,-->
-        <!--            вы всегда можете быть уверены в нашей гарантии. Мы обменяем-->
-        <!--            сгоревший товар на новый.-->
-        <!--            Дом уж восстановите как-нибудь сами.-->
-        <!--          </dd>-->
-        <!--        </dl>-->
-        <!--        <dl>-->
-        <!--          <dt class="description-header">Кредит</dt>-->
-        <!--          <dd class="description-credit">-->
-        <!--            <p>Залезть в долговую яму стало проще!-->
-        <!--              Кредитные консультанты придут вам на помощь.-->
-        <!--            </p>-->
-        <!--            <a href="#">Отправить заявку</a>-->
-        <!--          </dd>-->
-        <!--        </dl>-->
+        <div class="descriptions">
+          <dl class="item-description" id="description-delivery">
+            <dt class="description-header">Доставка</dt>
+            <dd class="description-delivery-text">
+              Мы с удовольствием доставим ваш товар прямо<br>
+              к вашему подъезду совершенно бесплатно!<br>
+              Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж!<br>
+            </dd>
+          </dl>
+          <dl class="item-description" id="description-guarantee">
+            <dt class="description-header">Гарантия</dt>
+            <dd class="description-guarantee-text">
+              Если купленный у нас товар поломается или заискрит,<br>
+              а также в случае пожара, спровоцированного его возгоранием,<br>
+              вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+              сгоревший товар на новый.<br>
+              Дом уж восстановите как-нибудь сами.<br>
+            </dd>
+          </dl>
+          <dl class="item-description" id="description-credit">
+            <dt class="description-header">Кредит</dt>
+            <dd class="description-credit-text">
+              <p>
+                Залезть в долговую яму стало проще!
+                Кредитные консультанты придут вам на помощь.
+              </p>
+              <a href="#">Отправить заявку</a>
+            </dd>
+          </dl>
+        </div>
+
       </div>
     </div>
   </section>
@@ -297,15 +314,14 @@
     <section class="contacts">
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-      <div class="map">
+      <a class="map-link" href="#">
         <img src="img/map.png" width="300" height="158" alt="Карта на которой отмечен наш офис">
-      </div>
-      <a href="#">
+      </a>
+      <a class="contacts-link" href="#">
         Заблудились? Напишите нам!
       </a>
     </section>
   </div>
-
 </main>
 <footer class="footer">
   <div class="footer-navigation container">
@@ -373,10 +389,11 @@
     </div>
   </div>
 </footer>
-<section class="form-message">
-  <div class="form-line"></div>
-  <h2 hidden>Сообщение</h2>
-  <div class="form-close">
+<section class="modal modal-message">
+  <form method="get"
+        action="https://echo.htmlacademy.ru">
+    <div class="modal-line"></div>
+    <h2 hidden>Сообщение</h2>
     <button class="close-button" type="button" aria-label="Закрыть">
       <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
            xmlns="http://www.w3.org/2000/svg">
@@ -385,42 +402,57 @@
           fill="#ee3643"/>
       </svg>
     </button>
-  </div>
-  <div class="form-elements">
-    <div class="top-line">
-      <label class="top-input">Ваше имя:
-        <input class="input-message" type="text" name="message-name" id="name" placeholder="Имя Фамилия">
-      </label>
-      <label class="top-input">Ваш e-mail:
-        <input class="input-message" type="email" name="message-email" id="email" placeholder="email@example.com">
+    <div class="form-elements">
+      <div class="top-line">
+        <label class="top-input">Ваше имя:
+          <input class="input-message message-name" type="text" name="message-name" id="message-name"
+                 placeholder="Имя Фамилия">
+        </label>
+        <label class="top-input">Ваш e-mail:
+          <input class="input-message message-email" type="email" name="message-email" id="message-email"
+                 placeholder="email@example.com">
+        </label>
+      </div>
+      <label class="bottom-input">Текст письма:
+        <textarea class="input-message message-text" name="message-text" id="message-text" rows="5"
+                  placeholder="В свободной форме"></textarea>
       </label>
     </div>
-    <label class="bottom-input">Текст письма:
-      <textarea class="input-message" name="message-text" id="message" rows="5"
-                placeholder="В свободной форме"></textarea>
-    </label>
-  </div>
-  <div class="button-area">
-    <button class="button-submit" type="submit">Отправить</button>
-  </div>
+    <div class="button-area">
+      <button class="button-submit" type="submit">Отправить</button>
+    </div>
+  </form>
 </section>
-<section class="add-cart">
-  <div class="form-line"></div>
-  <div class="form-close">
-    <button class="close-button" type="button" aria-label="Закрыть">
-      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
-           xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
-          fill="#ee3643"/>
-      </svg>
-    </button>
-  </div>
+<section class="modal modal-add-cart">
+  <div class="modal-line"></div>
+  <button class="close-button" type="button" aria-label="Закрыть">
+    <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
+         xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
+        fill="#ee3643"/>
+    </svg>
+  </button>
   <h2>Товар добавлен в корзину</h2>
   <div class="buttons-back">
     <a class="issue-order" href="#">Оформить заказ</a>
     <button class="button-continue" type="button">Продолжить покупки</button>
   </div>
 </section>
+<section class="modal modal-map">
+  <button class="map-close" type="button" aria-label="Закрыть">
+    <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
+         xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
+        fill="#ee3643"/>
+    </svg>
+  </button>
+  <h2 class="visually-hidden">Как до нас добраться</h2>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.599104370521!2d30.32088925187736!3d59.93879418178727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1570702841544!5m2!1sru!2sru"
+    width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</section>
+<script src="js/script.js"></script>
 </body>
 </html>

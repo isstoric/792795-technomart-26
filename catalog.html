@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Каталог</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic"
-        rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
@@ -27,10 +25,10 @@
       </form>
       <ul class="order-links">
         <li class="order-links-item">
-          <a class="links-optional" href="#">Закладки: 0</a>
+          <a class="links-optional link-bookmarks" href="#">Закладки: 0</a>
         </li>
         <li class="order-links-item">
-          <a class="links-optional full" href="#">Корзина: 10</a>
+          <a class="links-optional link-cart" href="#">Корзина: 0</a>
         </li>
         <li>
           <a class="order" href="#">Оформить заказ</a>
@@ -39,7 +37,7 @@
     </div>
   </div>
   <div class="header-info container">
-    <p class="about-shop">Интернет-магазин строительных материалов  и инструментов для ремонта</p>
+    <p class="about-shop">Интернет-магазин  строительных материалов  и инструментов для ремонта</p>
     <address class="header-address">
       <a href="tel:+78125550555">+7 (812) 555-05-55</a>
       <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
@@ -98,7 +96,8 @@
   <div class="two-columns container">
     <section class="filter">
       <h2>Фильтр:</h2>
-      <form action="#">
+      <form method="get"
+            action="https://echo.htmlacademy.ru">
         <fieldset class="price-filter">
           <legend>Цена:</legend>
           <div class="range-controls">
@@ -139,7 +138,8 @@
             <label class="label-maker" for="maker-bosh">Bosch</label>
           </p>
           <p>
-            <input class="input-maker visually-hidden" type="checkbox" id="maker-interscol" name="maker-interscol" disabled>
+            <input class="input-maker visually-hidden" type="checkbox" id="maker-interscol" name="maker-interscol"
+                   disabled>
             <label class="label-maker" for="maker-interscol">Интерскол</label>
           </p>
           <p>
@@ -158,7 +158,8 @@
         <fieldset class="power-filter">
           <legend>Питание:</legend>
           <p>
-            <input class="input-power visually-hidden" type="radio" id="accumulator" name="power" value="accumulator" checked>
+            <input class="input-power visually-hidden" type="radio" id="accumulator" name="power" value="accumulator"
+                   checked>
             <label class="label-power" for="accumulator">Аккумуляторные</label><br>
           </p>
           <p>
@@ -171,19 +172,29 @@
     </section>
     <section>
       <h2 hidden>Список товаров</h2>
-      <div class="sorting-items">
+      <div class="sorting">
         <h3>Сортировка:</h3>
-        <a class="sorting-item sorting-active" href="#">По цене</a>
-        <a class="sorting-item" href="#">По типу</a>
-        <a class="sorting-item" href="#">По функционалу</a>
-        <a class="sorting-type type-active " href="#" aria-label="По-убыванию цены"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg></a>
-        <a class="sorting-type" href="#" aria-label="По-возрастанию цены"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg></a>
+        <div class="sorting-items">
+          <a class="sorting-item sorting-active" href="#">По цене</a>
+          <a class="sorting-item" href="#">По типу</a>
+          <a class="sorting-item" href="#">По функционалу</a>
+          <a class="sorting-type type-active " href="#" aria-label="По-убыванию цены">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+            </svg>
+          </a>
+          <a class="sorting-type" href="#" aria-label="По-возрастанию цены">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+              <path fill="#231F20" d="M5.5 10L0 0h11"/>
+            </svg>
+          </a>
+        </div>
       </div>
       <ul class="catalog-items">
         <li class="catalog-item">
           <div class="item-actions">
             <a href="#" class="buy-button">Купить</a>
-            <a href="#" class="to-bookmarks">В закладки</a>
+            <a href="#" class="add-bookmarks">В закладки</a>
           </div>
           <div class="item-image">
             <img src="img/item1.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 3000">
@@ -197,7 +208,7 @@
         <li class="catalog-item">
           <div class="item-actions">
             <a href="#" class="buy-button">Купить</a>
-            <a href="#" class="to-bookmarks">В закладки</a>
+            <a href="#" class="add-bookmarks">В закладки</a>
           </div>
           <div class="item-image">
             <img src="img/item2.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 6000">
@@ -212,7 +223,7 @@
           <div class="flag flag-new">новинка</div>
           <div class="item-actions">
             <a href="#" class="buy-button">Купить</a>
-            <a href="#" class="to-bookmarks">В закладки</a>
+            <a href="#" class="add-bookmarks">В закладки</a>
           </div>
           <div class="item-image">
             <img src="img/item3.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 2000">
@@ -226,7 +237,7 @@
         <li class="catalog-item">
           <div class="item-actions">
             <a href="#" class="buy-button">Купить</a>
-            <a href="#" class="to-bookmarks">В закладки</a>
+            <a href="#" class="add-bookmarks">В закладки</a>
           </div>
           <div class="item-image">
             <img src="img/item1.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 3000">
@@ -241,7 +252,7 @@
           <div class="flag flag-new">новинка</div>
           <div class="item-actions">
             <a href="#" class="buy-button">Купить</a>
-            <a href="#" class="to-bookmarks">В закладки</a>
+            <a href="#" class="add-bookmarks">В закладки</a>
           </div>
           <div class="item-image">
             <img src="img/item2.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 6000">
@@ -255,7 +266,7 @@
         <li class="catalog-item">
           <div class="item-actions">
             <a href="#" class="buy-button">Купить</a>
-            <a href="#" class="to-bookmarks">В закладки</a>
+            <a href="#" class="add-bookmarks">В закладки</a>
           </div>
           <div class="item-image">
             <img src="img/item3.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 2000">
@@ -270,7 +281,7 @@
           <div class="flag flag-new">новинка</div>
           <div class="item-actions">
             <a href="#" class="buy-button">Купить</a>
-            <a href="#" class="to-bookmarks">В закладки</a>
+            <a href="#" class="add-bookmarks">В закладки</a>
           </div>
           <div class="item-image">
             <img src="img/item1.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 3000">
@@ -284,7 +295,7 @@
         <li class="catalog-item">
           <div class="item-actions">
             <a href="#" class="buy-button">Купить</a>
-            <a href="#" class="to-bookmarks">В закладки</a>
+            <a href="#" class="add-bookmarks">В закладки</a>
           </div>
           <div class="item-image">
             <img src="img/item2.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 6000">
@@ -298,7 +309,7 @@
         <li class="catalog-item">
           <div class="item-actions">
             <a href="#" class="buy-button">Купить</a>
-            <a href="#" class="to-bookmarks">В закладки</a>
+            <a href="#" class="add-bookmarks">В закладки</a>
           </div>
           <div class="item-image">
             <img src="img/item3.jpg" width="218" height="170" alt="Перфоратор BOSCH  BFG 2000">
@@ -318,7 +329,6 @@
       </ul>
     </section>
   </div>
-
   <section class="item-about">
     <div class="container">
       <h2>Пара слов о перфораторах</h2>
@@ -398,23 +408,22 @@
     </div>
   </div>
 </footer>
-<section class="add-cart">
-  <div class="form-line"></div>
-  <div class="form-close">
-    <button class="close-button" type="button" aria-label="Закрыть">
-      <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
-           xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
-          fill="#ee3643"/>
-      </svg>
-    </button>
-  </div>
+<section class="modal modal-add-cart">
+  <div class="modal-line"></div>
+  <button class="close-button" type="button" aria-label="Закрыть">
+    <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21"
+         xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z"
+        fill="#ee3643"/>
+    </svg>
+  </button>
   <h2>Товар добавлен в корзину</h2>
   <div class="buttons-back">
     <a class="issue-order" href="#">Оформить заказ</a>
     <button class="button-continue" type="button">Продолжить покупки</button>
   </div>
 </section>
+<script src="js/script.js"></script>
 </body>
 </html>
