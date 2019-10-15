@@ -3,14 +3,14 @@ let countBookmarks = 0;
 let bookmarksLink = document.querySelector(".link-bookmarks");
 let addBookmarks = document.querySelectorAll(".add-bookmarks");
 if (bookmarksLink && addBookmarks.length !== 0) {
-  addBookmarks.forEach(function (addBookmark) {
-    addBookmark.addEventListener("click", function (evt) {
+  for (let i = 0; i < addBookmarks.length; i++) {
+    addBookmarks[i].addEventListener("click", function (evt) {
       evt.preventDefault();
       countBookmarks++;
       bookmarksLink.innerHTML = "Закладки: " + countBookmarks
       bookmarksLink.classList.add("full");
     })
-  })
+  }
 }
 
 //cart
@@ -28,15 +28,15 @@ let countItems = 0;
 let buyLinks = document.querySelectorAll(".buy-button");
 let cartLink = document.querySelector(".link-cart");
 if (buyLinks.length !== 0 && modalAddCart && cartLink) {
-  buyLinks.forEach(function (buyLink) {
-    buyLink.addEventListener("click", function (evt) {
+  for (let i = 0; i < buyLinks.length; i++) {
+    buyLinks[i].addEventListener("click", function (evt) {
       evt.preventDefault();
       countItems++;
       cartLink.innerHTML = "Корзина: " + countItems;
       cartLink.classList.add("full");
       modalAddCart.classList.add("modal-show");
     })
-  })
+  }
   window.addEventListener("keydown", function (evt) {
       if (evt.keyCode === 27) {
         if (modalAddCart.classList.contains("modal-show")) {
