@@ -76,6 +76,9 @@ if (contactLink && modalMessage) {
     if (!messageName.value || !messageEmail.value) {
       evt.preventDefault();
       modalMessage.classList.add("modal-error");
+      setTimeout(() => {
+        modalMessage.classList.remove("modal-error")
+      }, 600)
       console.log("Необходимо ввести имя и email")
     } else {
       evt.preventDefault();
