@@ -1628,7 +1628,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   position: absolute;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .input-maker:checked + .label-maker:hover::before,
@@ -2581,7 +2581,7 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.map{
+.map {
   width: 940px;
   height: 446px;
   border: none;
