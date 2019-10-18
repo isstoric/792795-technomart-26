@@ -941,6 +941,7 @@ img {
 
 .popular-makers li {
   list-style-type: none;
+  box-sizing: border-box;
   border: solid 1px #eaeaea;
   margin-bottom: 20px;
   width: 220px;
@@ -979,7 +980,7 @@ img {
   font-family: "Cuprum", "Arial", sans-serif;
   margin-top: 0;
   margin-bottom: 26px;
-  padding-top: 60px;
+  padding-top: 64px;
 
 }
 
@@ -1378,7 +1379,7 @@ img {
 
 .catalog-header {
   font-size: 30px;
-font-weight: normal;
+  font-weight: normal;
   line-height: 30px;
   text-transform: uppercase;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -1565,6 +1566,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   position: absolute;
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .input-maker:checked + .label-maker::before {
@@ -1578,6 +1580,7 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   position: absolute;
   cursor: pointer;
+  opacity: 0.7;
 }
 
 
@@ -1591,7 +1594,7 @@ input[type="radio"].visually-hidden {
   left: -35px;
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-off-hover.svg");
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
@@ -1605,7 +1608,7 @@ input[type="radio"].visually-hidden {
   left: -35px;
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-on-hover.svg");
+  background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
@@ -1620,11 +1623,12 @@ input[type="radio"].visually-hidden {
   left: -35px;
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-off-hover.svg");
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .input-maker:checked + .label-maker:hover::before,
@@ -1634,11 +1638,12 @@ input[type="radio"].visually-hidden {
   left: -35px;
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-on-hover.svg");
+  background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
   cursor: pointer;
+  opacity: 1;
 }
 
 .input-maker:disabled + .label-maker::before {
@@ -1690,8 +1695,8 @@ input[type="radio"].visually-hidden {
 
 .label-power::before {
   content: "";
-  top: -1px;
-  left: -35px;
+  top: -3px;
+  left: -36px;
   width: 25px;
   height: 25px;
   background-image: url("../img/radio-off.svg");
@@ -1699,26 +1704,28 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   position: absolute;
   cursor: pointer;
+  opacity: 0.7;
 }
 
 .label-power:hover::before,
 .input-power:focus + .label-power::before {
   content: "";
-  top: -1px;
-  left: -35px;
+  top: -3px;
+  left: -36px;
   width: 25px;
   height: 25px;
-  background-image: url("../img/radio-off-hover.svg");
+  background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
   cursor: pointer;
+  opacity: 1;
 }
 
 .input-power:checked + .label-power::before {
   content: "";
-  top: -1px;
-  left: -35px;
+  top: -3px;
+  left: -36px;
   width: 25px;
   height: 25px;
   background-image: url("../img/radio-on.svg");
@@ -1726,20 +1733,23 @@ input[type="radio"].visually-hidden {
   background-position: 0 0;
   position: absolute;
   cursor: pointer;
+  opacity: 0.7;
+
 }
 
 .input-power:checked + .label-power:hover::before,
 .input-power:checked:focus + .label-power::before {
   content: "";
-  top: -1px;
-  left: -35px;
+  top: -3px;
+  left: -36px;
   width: 25px;
   height: 25px;
-  background-image: url("../img/radio-on-hover.svg");
+  background-image: url("../img/radio-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   position: absolute;
   cursor: pointer;
+  opacity: 1;
 }
 
 .filter .button-submit {
@@ -2411,7 +2421,7 @@ input[type="radio"].visually-hidden {
 .modal-message .input-message {
   font-size: 13px;
   line-height: 18px;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   margin-top: 13px;
   padding-left: 16px;
   border: solid 2px #d7dcde;
@@ -2569,6 +2579,13 @@ input[type="radio"].visually-hidden {
   padding: 0;
   border: 0;
   cursor: pointer;
+}
+
+.map{
+  width: 940px;
+  height: 446px;
+  border: none;
+
 }
 
 @keyframes bounce {
