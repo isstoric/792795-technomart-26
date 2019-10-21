@@ -83,9 +83,9 @@ if (contactLink && modalMessage) {
     } else {
       evt.preventDefault();
       console.log(
-        'Имя:' + messageName.value + '\n' +
-        'Email:' + messageEmail.value + '\n' +
-        'Text:' + messageText.value + '\n'
+        "Имя:" + messageName.value + "\n" +
+        "Email:" + messageEmail.value + "\n" +
+        "Text:" + messageText.value + "\n"
       )
     }
   })
