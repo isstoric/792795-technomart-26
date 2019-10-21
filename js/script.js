@@ -76,16 +76,16 @@ if (contactLink && modalMessage) {
     if (!messageName.value || !messageEmail.value) {
       evt.preventDefault();
       modalMessage.classList.add("modal-error");
-      setTimeout(() => {
+      setTimeout(function() {
         modalMessage.classList.remove("modal-error")
       }, 600)
       console.log("Необходимо ввести имя и email")
     } else {
       evt.preventDefault();
       console.log(
-        `Имя: ${messageName.value}` + '\n' +
-        `Email: ${messageEmail.value}` + '\n' +
-        `Text: ${messageText.value}` + '\n'
+        'Имя:' + messageName.value + '\n' +
+        'Email:' + messageEmail.value + '\n' +
+        'Text:' + messageText.value + '\n'
       )
     }
   })
